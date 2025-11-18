@@ -1,0 +1,58 @@
+unit unFuncional;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  System.Types,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    edtEntrada: TEdit;
+    memoResultado: TMemo;
+    btnDobrar: TButton;
+    btnFiltraraPares: TButton;
+    btnSomarQuadrados: TButton;
+
+
+  private
+    { Private declarations }
+    function ObterLista: TArray<Integer>;
+    procedure ExibirLista(lista: TArray<integer>);
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.ExibirLista(lista: TArray<integer>);
+begin
+
+end;
+
+function TForm1.ObterLista: TArray<Integer>;
+var
+  partes: TArray<string>;
+  i: integer;
+begin
+  partes := String(edtEntrada.Text).split([',']);
+  SetLength(Result, Length(partes));
+  for I := 0 to High(partes) do
+    Result[i] := StrToIntDef(Trim(partes[i]), 0);
+end;
+
+end.
