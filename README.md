@@ -50,9 +50,12 @@ Este projeto demonstra os seguintes princípios da programação funcional:
 
 ## 📁 Estrutura do Projeto
 
-pensando-funcionalmente/ ├── PFuncional.dpr           # Arquivo principal do projeto ├── PFuncional.dproj         # Configurações do projeto ├── unFuncional.pas          # Código-fonte com a lógica funcional ├── unFuncional.dfm          # Formulário visual └── __history/               # Arquivos de backup do Delphi (podem ser ignorados)
-
-
+pensando-funcionalmente/
+├── PFuncional.dpr           # Arquivo principal do projeto
+├── PFuncional.dproj         # Configurações do projeto
+├── unFuncional.pas          # Código-fonte com a lógica funcional
+├── unFuncional.dfm          # Formulário visual
+└── __history/               # Arquivos de backup do Delphi (podem ser ignorados)
 ---
 
 ## 🧹 Recomendações
