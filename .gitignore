@@ -1,0 +1,35 @@
+# Arquivos de compilação
+*.dcu
+*.exe
+*.dll
+*.map
+*.bak
+*.log
+*.stat
+*.tds
+*.tmp
+
+# Arquivos de configuração local
+*.local
+*.identcache
+*.tvsconfig
+*.dsk
+
+# Histórico e backups do Delphi
+__history/
+*.~*
+
+# Arquivos de cache e temporários
+*.ipch
+*.pch
+*.obj
+*.res
+*.ncb
+*.suo
+*.user
+*.aps
+*.plg
+
+# Pastas ocultas
+.vscode/
+.idea/
