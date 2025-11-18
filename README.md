@@ -38,4 +38,25 @@ A interface é composta por:
 
 ## 📁 Estrutura do Projeto
 
-<pre>```pensando-funcionalmente/├── PFuncional.dpr          # Arquivo principal do projeto├── PFuncional.dproj        # Configurações do projeto├── unFuncional.pas         # Código-fonte com a lógica funcional├── unFuncional.dfm         # Formulário visual└── __history/            # Arquivos de backup do Delphi (podem ser ignorados)```</pre>
+pensando-funcionalmente/
+├── PFuncional.dpr           # Arquivo principal do projeto
+├── PFuncional.dproj         # Configurações do projeto
+├── unFuncional.pas          # Código-fonte com a lógica funcional
+├── unFuncional.dfm          # Formulário visual
+└── __history/               # Arquivos de backup do Delphi (podem ser ignorados)
+
+
+---
+
+## 🧹 Recomendações
+
+Adicione um `.gitignore` para manter o repositório limpo:
+
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por [Savio Souza](https://github.com/Saviosouza-Dev)
+
+📚 Projeto educacional para fins de estudo e prática com Delphi e programação funcional.
