@@ -3,10 +3,9 @@
 interface
 
 uses
-  // Bibliotecas padrão do Delphi para interface gráfica e manipulação de dados
   Winapi.Windows,
   Winapi.Messages,
-  System.SysUtils,      // Necessária para usar Split, Trim, StrToIntDef etc.
+  System.SysUtils,
   System.Variants,
   System.Classes,
   System.Types,
@@ -17,20 +16,20 @@ uses
   Vcl.StdCtrls;
 
 type
-  // Declaração do formulário principal
   TfmFuncional = class(TForm)
-    edtEntrada: TEdit;               // Campo de entrada de números (ex: 1,2,3)
-    memoResultado: TMemo;           // Área para exibir os resultados
-    btnDobrar: TButton;             // Botão para dobrar os valores
-    btnFiltraraPares: TButton;      // Botão para filtrar apenas os pares
-    btnSomarQuadrados: TButton;     // Botão para somar os quadrados dos números
-    btnLimpar: TButton;             // Botão para limpar entrada e resultado
+    edtEntrada: TEdit;
+    memoResultado: TMemo;
+    btnDobrar: TButton;
+    btnFiltraraPares: TButton;
+    btnSomarQuadrados: TButton;
+    btnLimpar: TButton;
 
-    // Eventos dos botões
     procedure btnDobrarClick(Sender: TObject);
     procedure btnFiltraraParesClick(Sender: TObject);
     procedure btnSomarQuadradosClick(Sender: TObject);
     procedure btnLimparClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure edtEntradaKeyPress(Sender: TObject; var Key: Char);
 
   private
     // Função que converte o texto digitado em uma lista de inteiros
@@ -46,15 +45,15 @@ var
 
 implementation
 
-{$R *.dfm} // Carrega os componentes visuais definidos no formulário
+{$R *.dfm}
 
 // multiplica cada número da lista por 2
 procedure TfmFuncional.btnDobrarClick(Sender: TObject);
 var
-  lista, resultado: TArray<Integer>;
+  lista, resultado: TArray<Integer>; //Variaveis do tipo Array
   i: integer;
 begin
-  lista := ObterLista; // Obtém os números digitados
+  lista := ObterLista; // Obtém os números digitados         //variável receber a functiona ObterLista que é  uma funactio do tio Tarray
   SetLength(resultado, Length(lista)); // Prepara array de mesmo tamanho
   for I := 0 to High(lista) do
     resultado[i] := lista[i] * 2; // Aplica transformação funcional
@@ -71,7 +70,7 @@ begin
   SetLength(resultado, Length(lista)); // Prepara array temporário
   count := 0;
   for I := 0 to High(lista) do
-    if lista[i] mod 2 = 0 then // Verifica se é par
+  if lista[i] mod 2 = 0 then // Verifica se é par
     begin
       resultado[count] := lista[i]; // Adiciona ao resultado
       inc(count); // Avança o índice
@@ -100,6 +99,12 @@ begin
   MemoResultado.Lines.Add('Soma dos quadrados: ' + IntToStr(soma));
 end;
 
+procedure TfmFuncional.edtEntradaKeyPress(Sender: TObject; var Key: Char);
+begin
+  if key = #27 then
+  key := #0;
+end;
+
 // Exibe uma lista de inteiros formatada no memoResultado
 procedure TfmFuncional.ExibirLista(lista: TArray<integer>);
 var
@@ -110,6 +115,17 @@ begin
   for I := 0 to High(lista) do
     s := s + IntToStr(lista[i]) + ', '; // Concatena os valores
   memoResultado.Lines.Add('Resultado: ' + s.TrimRight([',', ' '])); // Remove vírgula final
+end;
+
+procedure TfmFuncional.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+ if key = VK_ESCAPE then
+ begin
+  key := 0;
+  Close;
+ end;
+
 end;
 
 // Converte o texto digitado em uma lista de inteiros

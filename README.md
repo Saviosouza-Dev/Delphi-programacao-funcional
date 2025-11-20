@@ -55,13 +55,10 @@ pensando-funcionalmente/
 ├── PFuncional.dproj         # Configurações do projeto
 ├── unFuncional.pas          # Código-fonte com a lógica funcional
 ├── unFuncional.dfm          # Formulário visual
-└── __history/               # Arquivos de backup do Delphi (podem ser ignorados)
----
 
 ## 🧹 Recomendações
 
 Adicione um `.gitignore` para manter o repositório limpo:
-
 
 ---
 
@@ -70,4 +67,6 @@ Adicione um `.gitignore` para manter o repositório limpo:
 Desenvolvido por [Savio Souza](https://github.com/Saviosouza-Dev)
 
 📚 Projeto educacional para fins de estudo e prática com Delphi e programação funcional.
+
+
 
