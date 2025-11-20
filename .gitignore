@@ -16,7 +16,7 @@
 *.dsk
 
 # Histórico e backups do Delphi
-__history/
+*__history/
 *.~*
 
 # Arquivos de cache e temporários
