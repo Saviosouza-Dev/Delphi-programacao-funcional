@@ -1,4 +1,4 @@
-unit unFuncional;
+﻿unit unFuncional;
 
 interface
 
