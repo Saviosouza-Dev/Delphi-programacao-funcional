@@ -1,4 +1,4 @@
-﻿unit unFuncional;
+unit unFuncional;
 
 interface
 
@@ -29,7 +29,6 @@ type
     procedure btnSomarQuadradosClick(Sender: TObject);
     procedure btnLimparClick(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure edtEntradaKeyPress(Sender: TObject; var Key: Char);
 
   private
@@ -126,11 +125,6 @@ begin
   key := 0;
   Close;
  end;
-
-end;
-
-procedure TfmFuncional.FormKeyPress(Sender: TObject; var Key: Char);
-begin
 
 end;
 

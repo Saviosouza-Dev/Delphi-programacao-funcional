@@ -10,6 +10,9 @@ object fmFuncional: TfmFuncional
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
   TextHeight = 15
   object btnDobrar: TButton
     Left = 5
@@ -51,6 +54,7 @@ object fmFuncional: TfmFuncional
     Width = 234
     Height = 23
     TabOrder = 0
+    OnKeyPress = edtEntradaKeyPress
   end
   object btnLimpar: TButton
     Left = 5
